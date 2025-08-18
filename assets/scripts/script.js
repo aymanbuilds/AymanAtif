@@ -211,3 +211,31 @@ pfScrollLeft.addEventListener('click', () => {
 pfScrollRight.addEventListener('click', () => {
     pfCarousel.scrollBy({ left: 360, behavior: 'smooth' });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all sections with a "data-animate-container" attribute
+    const sections = document.querySelectorAll("[data-animate-container]");
+
+    sections.forEach(section => {
+        const animatedElements = section.querySelectorAll("[data-animate]");
+
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Stagger animation in
+                        animatedElements.forEach((el, i) => {
+                            setTimeout(() => el.classList.add("show"), i * 100);
+                        });
+                    } else {
+                        // Reset animation when leaving viewport
+                        animatedElements.forEach(el => el.classList.remove("show"));
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        observer.observe(section);
+    });
+});
