@@ -1,0 +1,126 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+body, html{
+    scroll-behavior: smooth;
+}
+
+/* Domino-like fading grid background */
+.domino-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #111827;
+    /* same dark mode */
+}
+
+.cell {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    will-change: transform;
+    transition: transform 0.5s ease-out;
+    /* smooth movement */
+}
+
+/* Optional animation for subtle grid movement */
+@keyframes moveGrid {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+
+    50% {
+        background-position: 25px 25px, 25px 25px;
+    }
+
+    100% {
+        background-position: 0 0, 0 0;
+    }
+}
+
+.animated-grid {
+    animation: moveGrid 20s linear infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fadeInRight 0.6s forwards;
+}
+
+.fade-out {
+    animation: fadeOutLeft 0.6s forwards;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Edge */
+#pfCarousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+#pfCarousel {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+a {
+    color: #4ADE80 !important;
+}
