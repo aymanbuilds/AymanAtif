@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aymanbuilds.github.io/AymanAtif/sitemap.xml
