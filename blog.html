@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Title -->
+    <title>Ayman Atif | Blog - Full Stack .NET Developer Portfolio</title>
+
+    <!-- Meta Description -->
+    <meta name="description"
+        content="Read the blog of Ayman Atif, Full Stack .NET Developer. Tutorials, insights, and best practices on web, desktop, mobile development, and SEO.">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://aymanbuilds.github.io/AymanAtif/blog.html">
+
+    <!-- FavIcon -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+
+    <!-- Meta Keywords -->
+    <meta name="keywords"
+        content="Ayman Atif, Blog, Full Stack Developer, ASP.NET Core, C#, Web Development, Desktop Apps, Mobile Apps, SEO, Tutorials, Articles">
+
+    <!-- Meta Author -->
+    <meta name="author" content="Ayman Atif">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Ayman Atif | Blog - Full Stack .NET Developer Portfolio">
+    <meta property="og:description"
+        content="Explore tutorials, insights, and best practices from Ayman Atif, Full Stack .NET Developer, covering web, desktop, mobile development, and SEO.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aymanbuilds.github.io/AymanAtif/blog.html">
+    <meta property="og:image" content="https://aymanbuilds.github.io/AymanAtif/assets/images/ayman-atif.webp">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Raleway:wght@600;700;800&family=Poiret+One&display=swap"
+        rel="stylesheet">
+
+    <!-- JSON-LD Schema: Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Ayman Atif Blog",
+      "url": "https://aymanbuilds.github.io/AymanAtif/blog.html",
+      "description": "Insights, tutorials, and stories from Ayman Atif's journey in web, desktop, and mobile development.",
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Practices for Creating ASP.NET Core Controllers",
+          "image": "https://aymanbuilds.github.io/AymanAtif/assets/blog/images/best-practices-for-creating-ASP.NET-Core-controllers.webp",
+          "url": "https://aymanbuilds.github.io/AymanAtif/article/best-practices-for-creating-ASP.NET-Core-controllers.html",
+          "datePublished": "2025-01-15",
+          "author": {
+            "@type": "Person",
+            "name": "Ayman Atif"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Mastering SEO: On-Page and Off-Page Strategies",
+          "image": "https://aymanbuilds.github.io/AymanAtif/assets/blog/images/seo-strategies.webp",
+          "url": "https://aymanbuilds.github.io/AymanAtif/article/mastering-seo-on-page-and-off-page-strategies.html",
+          "datePublished": "2025-02-10",
+          "author": {
+            "@type": "Person",
+            "name": "Ayman Atif"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "What’s New in C# 10: Features and Improvements",
+          "image": "https://aymanbuilds.github.io/AymanAtif/assets/blog/images/csharp10-features.webp",
+          "url": "https://aymanbuilds.github.io/AymanAtif/article/whats-new-in-csharp-10.html",
+          "datePublished": "2025-03-05",
+          "author": {
+            "@type": "Person",
+            "name": "Ayman Atif"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Java vs Kotlin: Choosing the Best Language for Android Development",
+          "image": "https://aymanbuilds.github.io/AymanAtif/assets/blog/images/java-vs-kotlin.webp",
+          "url": "https://aymanbuilds.github.io/AymanAtif/article/java-vs-kotlin-for-android-development.html",
+          "datePublished": "2025-04-01",
+          "author": {
+            "@type": "Person",
+            "name": "Ayman Atif"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1 class="logo">Ayman Atif</h1>
+        <div class="header-buttons">
+            <a target="_blank" href="https://wa.me/+212688459384" class="btn hire-btn"><span data-text="Hire Me">Hire
+                    Me</span></a>
+            <button id="menu-btn" class="btn menu-btn"><span data-text="Menu">Menu</span></button>
+
+            <!-- FULLSCREEN MENU OVERLAY -->
+            <div id="menu-overlay" class="menu-overlay">
+                <button id="close-menu" class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+                <nav class="overlay-nav">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-hero">
+            <div class="domino-bg"></div>
+            <div class="hero-content">
+                <h1>Blog</h1>
+                <p>Insights, tutorials, and stories from my journey in web, desktop, and mobile development.</p>
+                <a href="#posts" class="btn hire-btn">
+                    <span data-text="Explore Posts">Explore Posts</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="posts" class="posts-section no-before">
+            <div class="container">
+                <h2 class="section-title">Latest Posts</h2>
+
+                <!-- Categories -->
+                <nav class="post-categories">
+                    <button class="category-btn active">All</button>
+                    <button class="category-btn">Web Development</button>
+                    <button class="category-btn">Mobile Development</button>
+                    <button class="category-btn">Desktop Development</button>
+                    <button class="category-btn">DevOps</button>
+                    <button class="category-btn">SEO</button>
+                </nav>
+
+                <!-- Posts Grid -->
+                <div class="posts-grid">
+                    <div class="post-card" data-link="article/best-practices-for-creating-ASP.NET-Core-controllers.html"
+                        data-category="Web Development">
+                        <img src="assets/blog/images/best-practices-for-creating-ASP.NET-Core-controllers.webp"
+                            alt="Best Practices for Creating ASP.NET Core Controllers">
+                        <h3>Best Practices for Creating ASP.NET Core Controllers</h3>
+                        <p>Learn how to build robust, maintainable, and scalable ASP.NET Core applications following
+                            SOLID principles, clean architecture, and modern best practices.</p>
+                    </div>
+
+                    <div class="post-card" data-link="article/mastering-seo-on-page-and-off-page-strategies.html"
+                        data-category="SEO">
+                        <img src="assets/blog/images/seo-strategies.webp" alt="SEO best practices illustration">
+                        <h3>Mastering SEO: On-Page and Off-Page Strategies</h3>
+                        <p>Discover the key techniques for boosting your website’s visibility with effective on-page
+                            optimization and powerful off-page SEO tactics that drive long-term growth.</p>
+                    </div>
+
+                    <div class="post-card" data-link="article/whats-new-in-csharp-10.html"
+                        data-category="Desktop Development">
+                        <img src="assets/blog/images/csharp10-features.webp" alt="C# 10 new features illustration">
+                        <h3>What’s New in C# 10: Features and Improvements</h3>
+                        <p>Explore the latest enhancements in C# 10, including global using directives, file-scoped
+                            namespaces, record improvements, and other modern features that simplify coding and improve
+                            maintainability.</p>
+                    </div>
+
+                    <div class="post-card" data-link="article/java-vs-kotlin-for-android-development.html"
+                        data-category="Mobile Development">
+                        <img src="assets/blog/images/java-vs-kotlin.webp"
+                            alt="Java vs Kotlin comparison for Android development">
+                        <h3>Java vs Kotlin: Choosing the Best Language for Android Development</h3>
+                        <p>Compare Java and Kotlin for Android development, explore their pros and cons, and learn which
+                            language is best suited for modern Android apps.</p>
+                    </div>
+
+                    <div class="post-card" data-link="article/wpf-vs-winforms.html" data-category="Desktop Development">
+                        <img src="assets/blog/images/wpf-vs-winforms.webp"
+                            alt="WPF vs WinForms comparison illustration">
+                        <h3>WPF vs WinForms: Choosing the Right Desktop Framework</h3>
+                        <p>Compare WPF and WinForms for desktop development. Learn their strengths, weaknesses, and best
+                            use cases to build modern, maintainable, and high-performance Windows applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <p class="footer-copy">&copy; 2025 Ayman Atif. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        menuBtn.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        // Optional: Close menu when clicking outside the nav
+        menuOverlay.addEventListener('click', (e) => {
+            if (e.target === menuOverlay) {
+                menuOverlay.classList.remove('active');
+            }
+        });
+
+        const bg = document.querySelector('.domino-bg');
+        const cells = [];
+        const cellSpacing = 50;
+
+        // Create grid cells and store their original positions
+        for (let x = 0; x < window.innerWidth; x += cellSpacing) {
+            for (let y = 0; y < window.innerHeight; y += cellSpacing) {
+                const div = document.createElement('div');
+                div.classList.add('cell');
+                div.style.left = `${x}px`;
+                div.style.top = `${y}px`;
+                bg.appendChild(div);
+                cells.push({ el: div, ox: x, oy: y }); // store original positions
+            }
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            const mx = e.clientX;
+            const my = e.clientY;
+
+            cells.forEach(c => {
+                const dx = mx - c.ox;
+                const dy = my - c.oy;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                const maxForce = 50;       // max distance cell can move
+                const influenceRadius = 300; // bigger = more cells affected
+
+                // force decreases smoothly with distance
+                const force = dist < influenceRadius ? maxForce * (1 - dist / influenceRadius) : 0;
+
+                const tx = (dx / dist) * force || 0;
+                const ty = (dy / dist) * force || 0;
+                c.el.style.transform = `translate(${tx}px, ${ty}px)`;
+            });
+        });
+
+        document.querySelectorAll('.post-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const link = card.dataset.link;
+                if (link) window.location.href = link;
+            });
+        });
+
+        // Select all category buttons and posts
+        const categoryButtons = document.querySelectorAll('.post-categories .category-btn');
+        const posts = document.querySelectorAll('.post-card');
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove 'active' class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                // Add 'active' class to clicked button
+                button.classList.add('active');
+
+                const category = button.textContent.trim();
+
+                posts.forEach(post => {
+                    const postCategory = post.getAttribute('data-category');
+
+                    // Show all posts if "All" is selected
+                    if (category === 'All' || postCategory === category) {
+                        post.style.display = 'block';
+                    } else {
+                        post.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

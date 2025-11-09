@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What’s New in C# 10: Features and Improvements | Ayman Atif</title>
+    <meta name="description"
+        content="Explore the latest enhancements in C# 10, including global using directives, file-scoped namespaces, record improvements, and modern features that simplify coding.">
+    <link rel="canonical" href="https://aymanbuilds.github.io/AymanAtif/article/whats-new-in-csharp-10.html">
+    <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="What’s New in C# 10: Features and Improvements | Ayman Atif">
+    <meta property="og:description"
+        content="Explore the latest enhancements in C# 10, including global using directives, file-scoped namespaces, record improvements, and modern features.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aymanbuilds.github.io/AymanAtif/article/whats-new-in-csharp-10.html">
+    <meta property="og:image"
+        content="https://aymanbuilds.github.io/AymanAtif/assets/blog/images/csharp10-features.webp">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "What’s New in C# 10: Features and Improvements",
+      "image": "https://aymanbuilds.github.io/AymanAtif/assets/blog/images/csharp10-features.webp",
+      "url": "https://aymanbuilds.github.io/AymanAtif/article/whats-new-in-csharp-10.html",
+      "datePublished": "2025-11-09",
+      "author": {
+        "@type": "Person",
+        "name": "Ayman Atif"
+      },
+      "description": "Explore the latest enhancements in C# 10, including global using directives, file-scoped namespaces, record improvements, and modern features that simplify coding."
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">Ayman Atif</div>
+        <div class="header-buttons">
+            <a target="_blank" href="https://wa.me/+212688459384" class="btn hire-btn"><span data-text="Hire Me">Hire
+                    Me</span></a>
+            <button id="menu-btn" class="btn menu-btn"><span data-text="Menu">Menu</span></button>
+
+            <!-- FULLSCREEN MENU OVERLAY -->
+            <div id="menu-overlay" class="menu-overlay">
+                <button id="close-menu" class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+                <nav class="overlay-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="../services.html">Services</a>
+                    <a href="../about.html">About</a>
+                    <a href="../blog.html">Blog</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero / Title -->
+        <section class="article-hero" style="background-image: url('../assets/blog/images/csharp10-features-cover.webp');
+        background-position: top;">
+            <div class="overlay" style="opacity: 0.65;"></div>
+            <div class="hero-content">
+                <h1>What’s New in C# 10: Features and Improvements</h1>
+                <p>Explore the latest enhancements in C# 10, including global using directives, file-scoped
+                    namespaces, record improvements, and other modern features that simplify coding and improve
+                    maintainability.</p>
+            </div>
+        </section>
+
+        <article class="blog-article">
+
+            <!-- Introduction -->
+            <section class="article-section highlight-section">
+                <h2>Introduction</h2>
+                <p>
+                    C# 10, released as part of .NET 6, introduces several powerful features and enhancements aimed at
+                    simplifying code, improving readability, and enhancing maintainability. These updates make C# even
+                    more
+                    concise and developer-friendly, allowing you to write clean, modern applications with less
+                    boilerplate.
+                </p>
+                <p>
+                    In this article, we’ll explore the most important features in C# 10, including <strong>global using
+                        directives</strong>,
+                    <strong>file-scoped namespaces</strong>, improvements to <strong>records</strong>, <strong>constant
+                        interpolated strings</strong>,
+                    and more. We’ll also provide practical code examples to help you apply these features in real
+                    projects.
+                </p>
+            </section>
+
+            <!-- Section: Global Using Directives -->
+            <section class="article-section">
+                <h2>Global Using Directives</h2>
+                <p>
+                    One of the most notable features in C# 10 is <strong>global using directives</strong>. They allow
+                    you to declare namespaces
+                    that apply across the entire project, reducing repetitive <code>using</code> statements in every
+                    file.
+                </p>
+                <pre><code class="language-csharp">
+// Before C# 10
+using System;
+using System.Collections.Generic;
+
+namespace MyApp
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+
+// With C# 10 - Global Usings
+global using System;
+global using System.Collections.Generic;
+
+namespace MyApp
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+        </code></pre>
+                <p>
+                    By moving common namespaces to a single global file (e.g., <code>GlobalUsings.cs</code>), you make
+                    your codebase cleaner and reduce clutter in each class file.
+                </p>
+            </section>
+
+            <!-- Section: File-Scoped Namespaces -->
+            <section class="article-section highlight-section">
+                <h2>File-Scoped Namespaces</h2>
+                <p>
+                    C# 10 introduces a shorter syntax for namespaces, allowing all code in a file to belong to a single
+                    namespace without additional indentation.
+                </p>
+                <pre><code class="language-csharp">
+// Traditional syntax
+namespace MyApp
+{
+    class Program
+    {
+        static void Main() { }
+    }
+}
+
+// File-scoped namespace in C# 10
+namespace MyApp;
+
+class Program
+{
+    static void Main() { }
+}
+        </code></pre>
+                <p>
+                    This small change improves readability, especially in files with multiple classes or long
+                    implementations.
+                </p>
+            </section>
+
+            <!-- Section: Record Enhancements -->
+            <section class="article-section">
+                <h2>Record Improvements</h2>
+                <p>
+                    Records in C# are used for immutable data objects. C# 10 adds enhancements like
+                    <strong>with-expressions for structs</strong> and <strong>parameterless record structs</strong>,
+                    making it easier to use value types immutably.
+                </p>
+                <pre><code class="language-csharp">
+// Record struct in C# 10
+public readonly record struct Point(int X, int Y);
+
+var point1 = new Point(5, 10);
+var point2 = point1 with { X = 20 };
+
+Console.WriteLine(point2); // Output: Point { X = 20, Y = 10 }
+        </code></pre>
+                <p>
+                    These changes provide more flexibility and performance improvements when working with immutable data
+                    types.
+                </p>
+            </section>
+
+            <!-- Section: Constant Interpolated Strings -->
+            <section class="article-section highlight-section">
+                <h2>Constant Interpolated Strings</h2>
+                <p>
+                    In previous versions, string interpolation couldn’t be used in <code>const</code> declarations. C#
+                    10 allows this, making compile-time string construction easier.
+                </p>
+                <pre><code class="language-csharp">
+// C# 10
+const string Name = "Ayman";
+const string Greeting = $"Hello, {Name}!";
+
+Console.WriteLine(Greeting); // Output: Hello, Ayman!
+        </code></pre>
+                <p>
+                    This feature reduces boilerplate code when building fixed string messages and helps maintain
+                    constants more efficiently.
+                </p>
+            </section>
+
+            <!-- Section: Lambda Expression Improvements -->
+            <section class="article-section">
+                <h2>Lambda Expression Improvements</h2>
+                <p>
+                    C# 10 enhances lambda expressions with <strong>natural types for lambdas</strong> and <strong>lambda
+                        return types</strong>.
+                    This makes them more versatile and easier to use in functional programming scenarios.
+                </p>
+                <pre><code class="language-csharp">
+// Lambda with natural return type
+Func<int, int> square = x => x * x;
+Console.WriteLine(square(5)); // Output: 25
+        </code></pre>
+            </section>
+
+            <!-- Section: Extended Pattern Matching -->
+            <section class="article-section highlight-section">
+                <h2>Extended Pattern Matching</h2>
+                <p>
+                    Pattern matching becomes even more expressive in C# 10, allowing logical patterns, relational
+                    patterns, and improved switch expressions.
+                </p>
+                <pre><code class="language-csharp">
+int score = 85;
+
+string grade = score switch
+{
+    >= 90 => "A",
+    >= 80 => "B",
+    >= 70 => "C",
+    _ => "F"
+};
+
+Console.WriteLine(grade); // Output: B
+        </code></pre>
+                <p>
+                    These improvements reduce conditional complexity and make code more readable.
+                </p>
+            </section>
+
+            <!-- Section: Conclusion -->
+            <section class="article-section highlight-section">
+                <h2>Conclusion</h2>
+                <p>
+                    C# 10 brings several modern features that simplify code, reduce boilerplate, and improve developer
+                    productivity.
+                    Global using directives, file-scoped namespaces, enhanced records, and extended pattern matching are
+                    just a few
+                    examples that make coding in C# cleaner and more efficient.
+                </p>
+                <p>
+                    By adopting these features, you can write more maintainable, concise, and expressive C# code —
+                    keeping your applications
+                    modern and aligned with the latest .NET practices.
+                </p>
+            </section>
+
+        </article>
+
+        <section id="explore-articles" class="posts-section" style="text-align: center;">
+            <div class="container">
+                <h2 class="section-title">Explore Other Articles</h2>
+                <p class="section-desc">
+                    Dive into more tutorials, insights, and tips on web, desktop, and mobile development.
+                </p>
+
+                <!-- Posts Grid -->
+                <div class="posts-grid">
+                    <div class="post-card"
+                        data-link="../article/best-practices-for-creating-ASP.NET-Core-controllers.html"
+                        data-category="Web Development">
+                        <img src="../assets/blog/images/best-practices-for-creating-ASP.NET-Core-controllers.webp"
+                            alt="Best Practices for Creating ASP.NET Core Controllers">
+                        <h3>Best Practices for Creating ASP.NET Core Controllers</h3>
+                        <p>Learn how to build robust, maintainable, and scalable ASP.NET Core applications following
+                            SOLID principles, clean architecture, and modern best practices.</p>
+                    </div>
+
+                    <div class="post-card" data-link="../article/mastering-seo-on-page-and-off-page-strategies.html"
+                        data-category="SEO">
+                        <img src="../assets/blog/images/seo-strategies.webp" alt="SEO best practices illustration">
+                        <h3>Mastering SEO: On-Page and Off-Page Strategies</h3>
+                        <p>Discover the key techniques for boosting your website’s visibility with effective on-page
+                            optimization and powerful off-page SEO tactics that drive long-term growth.</p>
+                    </div>
+
+                    <div class="post-card" data-link="../article/java-vs-kotlin-for-android-development.html"
+                        data-category="Mobile Development">
+                        <img src="../assets/blog/images/java-vs-kotlin.webp"
+                            alt="Java vs Kotlin comparison for Android development">
+                        <h3>Java vs Kotlin: Choosing the Best Language for Android Development</h3>
+                        <p>Compare Java and Kotlin for Android development, explore their pros and cons, and learn which
+                            language is best suited for modern Android apps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <nav class="footer-nav">
+            <a href="../index.html">Home</a>
+            <a href="../services.html">Services</a>
+            <a href="../about.html">About</a>
+            <a href="../blog.html">Blog</a>
+        </nav>
+        <p class="footer-copy">&copy; 2025 Ayman Atif. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        menuBtn.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        // Optional: Close menu when clicking outside the nav
+        menuOverlay.addEventListener('click', (e) => {
+            if (e.target === menuOverlay) {
+                menuOverlay.classList.remove('active');
+            }
+        });
+
+        document.querySelectorAll('.post-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const link = card.dataset.link;
+                if (link) window.location.href = link;
+            });
+        });
+    </script>
+</body>
+
+</html>

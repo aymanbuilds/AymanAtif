@@ -4,564 +4,432 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayman Atif Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Ayman Atif - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Raleway:wght@600;700;800&family=Poiret+One&display=swap"
+        rel="stylesheet">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- SEO Title -->
+        <title>Ayman Atif | Full Stack .NET Developer Portfolio - Web, Desktop & Mobile Apps</title>
+
+        <!-- Meta Description -->
+        <meta name="description"
+            content="Ayman Atif - Full Stack .NET Developer with 7+ years experience building scalable web, desktop, and mobile applications. View portfolio and services.">
+
+        <!-- Canonical Link -->
+        <link rel="canonical" href="https://aymanbuilds.github.io/AymanAtif/">
+
+        <!-- FavIcon -->
+        <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+
+        <!-- Meta Keywords -->
+        <meta name="keywords"
+            content="Ayman Atif, Full Stack Developer, ASP.NET Core, .NET Developer, Web Development, Desktop Apps, Mobile Apps, Portfolio">
+
+        <!-- Meta Author -->
+        <meta name="author" content="Ayman Atif">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="Ayman Atif | Full Stack .NET Developer Portfolio">
+        <meta property="og:description"
+            content="Explore the portfolio of Ayman Atif, a Full Stack .NET Developer with 7+ years experience in web, desktop, and mobile applications.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://aymanbuilds.github.io/AymanAtif/">
+        <meta property="og:image" content="https://aymanbuilds.github.io/AymanAtif/assets/images/ayman-atif.webp">
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Raleway:wght@600;700;800&family=Poiret+One&display=swap"
+            rel="stylesheet">
+
+        <!-- JSON-LD Schema -->
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ayman Atif",
+      "url": "https://aymanbuilds.github.io/AymanAtif/",
+      "image": "https://aymanbuilds.github.io/AymanAtif/assets/images/ayman-atif.webp",
+      "jobTitle": "Full Stack .NET Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance / Independent"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/a95yman",
+        "https://wa.me/+212688459384",
+        "mailto:a95yman@gmail.com"
+      ],
+      "description": "Full Stack .NET Developer with 7+ years of experience building scalable web, desktop, and mobile applications. Expert in ASP.NET, APIs, and SQL, passionate about clean and reliable solutions."
+    }
+    </script>
+    </head>
+
 </head>
 
-<body class="bg-gray-900 text-white">
+<body>
 
-    <!-- Hero Section -->
-    <section data-animate-container id="hero"
-        class="relative min-h-[auto] sm:min-h-screen animated-grid grid grid-cols-12 px-4 sm:px-10 py-6 sm:py-10">
-        <div class="domino-bg fixed inset-0 z-[-1]"></div>
+    <!-- HEADER -->
+    <header class="header">
+        <h1 class="logo">Ayman Atif</h1>
+        <div class="header-buttons">
+            <a target="_blank" href="https://wa.me/+212688459384" class="btn hire-btn"><span data-text="Hire Me">Hire
+                    Me</span></a>
+            <button id="menu-btn" class="btn menu-btn"><span data-text="Menu">Menu</span></button>
 
-        <!-- Header -->
-        <header class="col-span-12 flex justify-between items-center mb-10">
-            <!-- Logo -->
-            <img data-animate width="38" height="38" src="assets/icons/logo.png" alt="Icon">
-
-            <!-- Desktop Nav -->
-            <ul class="hidden md:flex gap-6">
-                <li data-animate><a href="#hero" class="hover:text-gray-400 transition">Home</a></li>
-                <li data-animate><a href="#experience" class="hover:text-gray-400 transition">Experience</a></li>
-                <li data-animate><a href="#skills" class="hover:text-gray-400 transition">Skills</a></li>
-                <li data-animate><a href="#portfolio" class="hover:text-gray-400 transition">Portfolio</a></li>
-                <li data-animate><a href="#contact" class="hover:text-gray-400 transition">Contact</a></li>
-            </ul>
-
-            <!-- Mobile Hamburger -->
-            <button id="menu-btn" class="md:hidden text-2xl text-white">
-                ☰
-            </button>
-        </header>
-
-        <!-- Mobile Menu -->
-        <nav id="mobile-menu" class="hidden md:hidden flex flex-col gap-4 mt-4 mb-6 bg-gray-800 rounded-lg p-4">
-            <a href="#home" class="hover:text-gray-400 transition">Home</a>
-            <a href="#experience" class="hover:text-gray-400 transition">Experience</a>
-            <a href="#skills" class="hover:text-gray-400 transition">Skills</a>
-            <a href="#portfolio" class="hover:text-gray-400 transition">Portfolio</a>
-            <a href="#contact" class="hover:text-gray-400 transition">Contact</a>
-        </nav>
-
-        <!-- Social Icons -->
-        <div class="col-span-1 hidden sm:flex flex-col gap-4 justify-center items-center">
-            <a data-animate href="https://www.instagram.com/aoxt_9" target="_blank"
-                class="bg-white text-gray-900 p-1 rounded-md hover:bg-gray-300 transition">
-                <img width="38" height="38" src="assets/icons/instagram.png" alt="Instagram">
-            </a>
-
-            <a data-animate href="https://www.linkedin.com/in/a95yman/" target="_blank"
-                class="bg-white text-gray-900 p-1 rounded-md hover:bg-gray-300 transition">
-                <img width="38" height="38" src="assets/icons/linkedin.png" alt="Linkedin">
-            </a>
-
-            <a data-animate href="https://wa.me/+212688459384" target="_blank"
-                class="bg-white text-gray-900 p-1 rounded-md hover:bg-gray-300 transition">
-                <img width="38" height="38" src="assets/icons/whatsapp.png" alt="Whatsapp">
-            </a>
-
-            <a data-animate href="mailto:a95yman@gmail.com" target="_blank"
-                class="bg-white text-gray-900 p-1 rounded-md hover:bg-gray-300 transition">
-                <img width="38" height="38" src="assets/icons/gmail.png" alt="Gmail">
-            </a>
+            <!-- FULLSCREEN MENU OVERLAY -->
+            <div id="menu-overlay" class="menu-overlay">
+                <button id="close-menu" class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+                <nav class="overlay-nav">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
+                </nav>
+            </div>
         </div>
+    </header>
 
-        <!-- Main Content -->
-        <div
-            class="col-span-12 sm:col-span-11 w-full flex flex-col justify-center md:justify-start items-start text-left px-0 md:px-0">
-            <h1 id="hero-title"
-                class="w-full text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-0 leading-snug sm:leading-tight md:leading-tight lg:leading-tight overflow-hidden">
-                Hi, I'm Ayman Atif
-            </h1>
-            <p data-animate class="w-full text-gray-300 text-xl md:text-2xl max-w-full sm:max-w-2xl mb-0">
-                I’m a passionate web & mobile app developer, creating interactive, modern, and responsive experiences
-                for clients worldwide.
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h2 class="hero-title">Full Stack Web Developer</h2>
+
+            <div class="hero-grid">
+
+                <!-- LEFT COLUMN -->
+                <div class="hero-col">
+                    <div class="bio">
+                        <h3>BIOGRAPHY</h3>
+                        <p>
+                            Full Stack .NET Developer with 7+ years of experience in scalable web and desktop apps.
+                            Expert
+                            in ASP.NET, APIs, and SQL. Passionate about clean, reliable, and impactful solutions.
+                        </p>
+                    </div>
+
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <ul class="skills-list">
+                            <li><strong>ASP.NET Core</strong></li>
+                            <li><strong>.NET</strong></li>
+                            <li><strong>Python</strong></li>
+                            <li><strong>Flask</strong></li>
+                            <li><strong>React.js</strong></li>
+                            <li>Odoo Framework</li>
+                            <li>Front-End Development</li>
+                            <li>Back-End Development</li>
+                            <li class="more"><a href="about.html">...more</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="connect">
+                        <h3>Connect</h3>
+                        <div class="icons">
+                            <a target="_blank" href="mailto:a95yman@gmail.com" title="Email"><i
+                                    class="fa-regular fa-envelope"></i></a>
+                            <a target="_blank" href="https://wa.me/+212688459384" title="WhatsApp"><i
+                                    class="fa-brands fa-whatsapp"></i></a>
+                            <a target="_blank" href="https://linkedin.com/in/a95yman" title="LinkedIn"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MIDDLE COLUMN -->
+                <div class="hero-col center">
+                    <img src="assets/images/ayman-atif.webp" alt="Ayman Atif" class="profile-pic">
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="hero-col stats">
+                    <div class="stat-box">
+                        <h3>Experience</h3>
+                        <p>7+ Years</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Projects Done</h3>
+                        <p>70+</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Availability</h3>
+                        <p>Mon - Sat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="what-i-do">
+            <h2 class="section-title">Things I Love to Build</h2>
+            <p class="section-desc">
+                I craft high-quality applications across multiple platforms from modern web interfaces to Android and
+                desktop solutions, and I mentor developers to build better software.
             </p>
-        </div>
 
-        <!-- Bottom-right decorative circle with animated curve -->
-        <div data-animate
-            class="bottom-right-circle hidden sm:flex animate-float cursor-pointer absolute bottom-24 right-12 w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center z-0">
-            <a class="w-full h-full flex items-center justify-center" target="_blank" href="https://wa.me/+212688459384">
-                <img width="40" height="40" src="assets/icons/call.png" alt="Decorative">
-                <svg class="absolute -top-16 -left-16 w-24 h-24 pointer-events-none" viewBox="0 0 100 100" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                </svg>
-            </a>
-        </div>
-    </section>
-
-    <section id="experience" class="bg-gray-900 py-16">
-        <div class="max-w-[800px] mx-auto px-4">
-
-            <!-- Experience 1 -->
-            <article data-animate-container class="space-y-6">
-                <!-- Position -->
-                <p data-animate class="text-gray-400 text-sm font-semibold uppercase">Full Stack Developer</p>
-
-                <!-- Main Job Title -->
-                <h2 data-animate class="text-4xl md:text-5xl font-bold text-white">
-                    Upwork - Freelance Web & Mobile Development
-                </h2>
-
-                <!-- Image + Description Row -->
-                <div class="relative flex flex-col md:flex-row items-start gap-8 mt-6">
-                    <!-- Large Image -->
-                    <div data-animate class="w-full md:w-[70%]">
-                        <img src="assets/images/background-1.PNG" alt="Experience Image"
-                            class="w-full rounded-xl object-cover opacity-[0.2]">
-                    </div>
-
-                    <!-- Text starting on top of image for md+ and below image on small screens -->
-                    <div
-                        class="md:absolute md:top-0 md:left-[40%] w-full md:w-auto flex flex-col justify-start px-4 py-2 mt-4 md:mt-0">
-                        <p data-animate class="text-green-100 text-sm font-semibold uppercase">Freelance Developer</p>
-                        <h2 data-animate class="text-3xl md:text-4xl font-bold text-green-300 mt-1">
-                            Crafting Web, Python, and Mobile Solutions
-                        </h2>
-                        <p data-animate class="text-gray-200 mt-2 max-w-[500px]">
-                            Worked as a freelance developer from January 2023 to July 2024, building Flask web
-                            applications, Python tools,
-                            and occasionally desktop and mobile apps for clients worldwide. Delivered responsive,
-                            interactive, and modern solutions tailored to client requirements.
-                        </p>
+            <div class="service-grid">
+                <!-- Android Development -->
+                <div class="service-card">
+                    <div class="inner">
+                        <div class="icon">
+                            <i class="fa-brands fa-android"></i>
+                        </div>
+                        <h3>Android Development</h3>
+                        <p>I develop efficient and user-friendly Android apps that integrate seamlessly with APIs and
+                            backend services.</p>
                     </div>
                 </div>
-            </article>
 
-            <!-- Experience 2 -->
-            <article data-animate-container class="space-y-6 mt-16">
-                <!-- Position -->
-                <p data-animate class="text-gray-400 text-sm font-semibold uppercase">Freelance Developer</p>
-
-                <!-- Main Job Title -->
-                <h2 data-animate class="text-4xl md:text-5xl font-bold text-white">
-                    Freelancer.com – Web, Python & Mobile Projects
-                </h2>
-
-                <!-- Image + Description Row -->
-                <div class="relative flex flex-col md:flex-row-reverse items-start gap-8 mt-6">
-                    <!-- Large Image -->
-                    <div data-animate class="w-full md:w-[70%]">
-                        <img src="assets/images/background-2.PNG" alt="Experience Image"
-                            class="w-full rounded-xl object-cover opacity-[0.2]">
-                    </div>
-
-                    <!-- Text starting on top of image and overflowing to the left -->
-                    <div
-                        class="md:absolute md:top-0 md:right-[40%] w-full md:w-auto flex flex-col justify-start px-4 py-2 mt-4 md:mt-0 text-left">
-                        <p data-animate class="text-green-100 text-sm font-semibold uppercase">Freelance Developer</p>
-                        <h2 data-animate class="text-3xl md:text-4xl font-bold text-green-300 mt-1">
-                            Delivering Web, Python, and Mobile Solutions
-                        </h2>
-                        <p data-animate class="text-gray-200 mt-2 max-w-[500px]">
-                            Worked as a freelance developer from 2018 to 2022 on Freelancer.com, creating Flask web
-                            apps, Python tools, and occasional desktop and mobile applications for clients worldwide.
-                            Focused on delivering interactive and modern solutions tailored to client needs.
-                        </p>
+                <!-- Web Development -->
+                <div class="service-card active">
+                    <div class="inner">
+                        <div class="icon">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>I design and build responsive, scalable web applications using modern technologies like
+                            ASP.NET Core, JavaScript, and REST APIs.</p>
                     </div>
                 </div>
-            </article>
 
-            <!-- Experience 3 -->
-            <article data-animate-container class="space-y-6 mt-16">
-                <!-- Position -->
-                <p data-animate class="text-gray-400 text-sm font-semibold uppercase">Odoo Developer</p>
-
-                <!-- Main Job Title -->
-                <h2 data-animate class="text-4xl md:text-5xl font-bold text-white">
-                    Odoo ERP Development – 1 Year
-                </h2>
-
-                <!-- Image + Description Row -->
-                <div class="relative flex flex-col md:flex-row items-start gap-8 mt-6">
-                    <!-- Large Image -->
-                    <div data-animate class="w-full md:w-[70%]">
-                        <img src="assets/images/background-3.PNG" alt="Experience Image"
-                            class="w-full rounded-xl object-cover opacity-[0.2]">
-                    </div>
-
-                    <!-- Text starting on top of image but continuing outside -->
-                    <div
-                        class="md:absolute md:top-0 md:left-[40%] w-full md:w-auto flex flex-col justify-start px-4 py-2 mt-4 md:mt-0">
-                        <p data-animate class="text-green-100 text-sm font-semibold uppercase">Odoo Developer</p>
-                        <h2 data-animate class="text-3xl md:text-4xl font-bold text-green-300 mt-1">
-                            ERP Solutions & Custom Modules
-                        </h2>
-                        <p data-animate class="text-gray-200 mt-2 max-w-[500px]">
-                            Worked for 1 year as an Odoo developer, building custom modules, workflows, and ERP
-                            solutions for clients. Focused on optimizing business processes and delivering robust,
-                            scalable, and interactive applications.
-                        </p>
+                <!-- Desktop Development -->
+                <div class="service-card">
+                    <div class="inner">
+                        <div class="icon">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <h3>Desktop Development</h3>
+                        <p>I build robust desktop software solutions using .NET and C#, ensuring performance, stability,
+                            and great user experience.</p>
                     </div>
                 </div>
-            </article>
 
-            <!-- Experience 4 -->
-            <article data-animate-container class="space-y-6 mt-16">
-                <!-- Position -->
-                <p data-animate class="text-gray-400 text-sm font-semibold uppercase">Hackathon Winner</p>
-
-                <!-- Main Job Title -->
-                <h2 data-animate class="text-4xl md:text-5xl font-bold text-white">
-                    2015 Mobile App Hackathon
-                </h2>
-
-                <!-- Image + Description Row -->
-                <div class="relative flex flex-col md:flex-row-reverse items-start gap-8 mt-6">
-                    <!-- Large Image -->
-                    <div data-animate class="w-full md:w-[70%]">
-                        <img src="assets/images/background-4.PNG" alt="Hackathon Image"
-                            class="w-full rounded-xl object-cover opacity-[0.2]">
-                    </div>
-
-                    <!-- Text starting on top of image but continuing outside -->
-                    <div
-                        class="md:absolute md:top-0 md:right-[40%] w-full md:w-auto flex flex-col justify-start px-4 py-2 mt-4 md:mt-0 text-left">
-                        <p data-animate class="text-green-100 text-sm font-semibold uppercase">Hackathon Winner</p>
-                        <h2 data-animate class="text-3xl md:text-4xl font-bold text-green-300 mt-1">
-                            Created Award-Winning Mobile App
-                        </h2>
-                        <p data-animate class="text-gray-200 mt-2 max-w-[500px]">
-                            Participated in a mobile app hackathon in 2015 and won first place. Collaborated with a team
-                            to design and develop an innovative mobile application, showcasing creativity, coding
-                            skills, and rapid prototyping under pressure.
-                        </p>
+                <!-- Dev Coaching -->
+                <div class="service-card">
+                    <div class="inner">
+                        <div class="icon">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h3>Dev Coaching</h3>
+                        <p>I mentor junior developers, helping them understand best practices, clean code principles,
+                            and real-world project workflows.</p>
                     </div>
                 </div>
-            </article>
+            </div>
+        </section>
 
-        </div>
-    </section>
+        <!-- HOW I BUILD SECTION -->
+        <section class="how-i-build">
+            <div class="build-grid">
+                <!-- TEXT COLUMN -->
+                <div class="build-text">
+                    <h2 class="section-title">How I Turn Ideas into Quality Code</h2>
+                    <p>
+                        I follow industry best practices to ensure every application is scalable, maintainable, and
+                        reliable.
+                        Implementing <strong>SOLID principles</strong>, <strong>Separation of Concerns</strong>, and
+                        clean architecture,
+                        I focus on writing code that’s easy to understand, test, and extend. Automated testing and
+                        consistent design patterns
+                        make sure the applications I deliver stand the test of time.
+                    </p>
+                </div>
 
-    <section data-animate-container id="skills" class="w-full bg-[#151d2e] text-white py-16">
-        <div class="max-w-6xl mx-auto px-6 relative">
+                <!-- IMAGE COLUMN -->
+                <div class="build-cards">
+                    <div class="build-card">
+                        <img src="assets/images/demo1.png" alt="Demo App 1">
+                    </div>
+                    <div class="build-card">
+                        <img src="assets/images/demo2.png" alt="Demo App 2">
+                    </div>
+                    <div class="build-card">
+                        <img src="assets/images/demo3.png" alt="Demo App 3">
+                    </div>
+                    <div class="build-card">
+                        <img src="assets/images/demo5.png" alt="Demo App 3">
+                    </div>
+                    <div class="build-card">
+                        <img src="assets/images/demo4.png" alt="Demo App 3">
+                    </div>
+                </div>
 
-            <!-- Title + Desc -->
-            <div class="mb-10">
-                <h2 data-animate class="text-4xl md:text-5xl font-bold mb-4">Skills & Expertise</h2>
-                <p data-animate class="text-lg text-gray-300 max-w-2xl">
-                    Over the years, I’ve worked with a wide range of technologies, from frontend to backend and mobile.
-                    Here are some of my core skills with experience levels and what I can bring to projects.
+                <div class="buil-text">
+                    <p>
+                        Every project I work on is crafted with attention to detail, ensuring performance, security, and
+                        scalability.
+                        I emphasize clean, readable code and collaborative workflows, so teams can maintain and grow
+                        applications
+                        efficiently. My goal is to deliver software that not only works today but remains reliable and
+                        adaptable for the future.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section class="pricing-section">
+            <h2 class="section-title">Pricing & Packages</h2>
+            <p class="section-desc">
+                Choose the plan that fits your project needs. Transparent pricing for any type of project.
+            </p>
+
+            <div class="pricing-flex">
+                <!-- Fixed Price Card (white) -->
+                <div class="pricing-card">
+                    <h3>Fixed Price</h3>
+                    <p class="price">Minimal: $500 | Complex: $900+</p>
+                    <p class="desc">Perfect for small to medium projects with clear requirements and advanced features.
+                    </p>
+                    <ul>
+                        <li>Simple & advanced UI/UX</li>
+                        <li>Database integration if needed</li>
+                        <li>1–3 weeks delivery</li>
+                    </ul>
+                    <a href="services.html" class="btn outlined-btn">Choose</a>
+                </div>
+
+                <!-- Hourly Rate Card (white) -->
+                <div class="pricing-card">
+                    <h3>Hourly Rate</h3>
+                    <p class="price">$50 / hour</p>
+                    <p class="desc">Flexible pricing for ongoing or custom projects where hours vary.</p>
+                    <ul>
+                        <li>Pay as you go</li>
+                        <li>Transparent hours</li>
+                        <li>Ideal for small tasks</li>
+                    </ul>
+                    <a href="services.html" class="btn outlined-btn">Choose</a>
+                </div>
+
+                <!-- Long Term Card (transparent) -->
+                <div class="pricing-card transparent-card">
+                    <h3>Long Term</h3>
+                    <p class="price">$2500 / month</p>
+                    <p class="desc">Dedicated developer for ongoing projects or full-time team collaboration.</p>
+                    <ul>
+                        <li>Full-time availability</li>
+                        <li>Priority support</li>
+                        <li>Monthly reporting</li>
+                    </ul>
+                    <a href="services.html" class="btn outlined-btn">Choose</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="explore-articles" class="posts-section" style="text-align: center;">
+            <div class="container">
+                <h2 class="section-title">Explore Articles</h2>
+                <p class="section-desc">
+                    Dive into more tutorials, insights, and tips on web, desktop, and mobile development.
                 </p>
-            </div>
 
-            <!-- Controls + Carousel -->
-            <div class="relative">
-
-                <!-- Navigation Buttons (Top Right) -->
-                <div data-animate class="flex justify-end gap-3 mb-4">
-                    <button id="scrollLeft" class="bg-gray-800 p-3 rounded-full shadow hover:bg-gray-700">
-                        &#8592;
-                    </button>
-                    <button id="scrollRight" class="bg-gray-800 p-3 rounded-full shadow hover:bg-gray-700">
-                        &#8594;
-                    </button>
-                </div>
-
-                <!-- Skill Cards -->
-                <div id="carousel"
-                    class="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory scroll-smooth">
-
-                    <!-- HTML -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">HTML</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[95%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Semantic, responsive, and accessible markup for modern web pages.
-                        </p>
+                <!-- Posts Grid -->
+                <div class="posts-grid">
+                    <div class="post-card" data-link="article/best-practices-for-creating-ASP.NET-Core-controllers.html"
+                        data-category="Web Development">
+                        <img src="assets/blog/images/best-practices-for-creating-ASP.NET-Core-controllers.webp"
+                            alt="Best Practices for Creating ASP.NET Core Controllers">
+                        <h3>Best Practices for Creating ASP.NET Core Controllers</h3>
+                        <p>Learn how to build robust, maintainable, and scalable ASP.NET Core applications following
+                            SOLID principles, clean architecture, and modern best practices.</p>
                     </div>
 
-                    <!-- CSS -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">CSS</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[90%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Modern layouts, Flexbox, Grid, and responsive designs.
-                        </p>
+                    <div class="post-card" data-link="article/mastering-seo-on-page-and-off-page-strategies.html"
+                        data-category="SEO">
+                        <img src="assets/blog/images/seo-strategies.webp" alt="SEO best practices illustration">
+                        <h3>Mastering SEO: On-Page and Off-Page Strategies</h3>
+                        <p>Discover the key techniques for boosting your website’s visibility with effective on-page
+                            optimization and powerful off-page SEO tactics that drive long-term growth.</p>
                     </div>
 
-                    <!-- JavaScript -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">JavaScript</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[85%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Interactive web apps, DOM manipulation, and modern ES6+ features.
-                        </p>
-                    </div>
-
-                    <!-- Python & Flask -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">Python & Flask</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[85%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Backend APIs, automation scripts, and scalable web apps.
-                        </p>
-                    </div>
-
-                    <!-- ASP -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">ASP</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[70%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Legacy web apps and server-side logic.
-                        </p>
-                    </div>
-
-                    <!-- C# -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">C#</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[75%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Windows apps and backend development.
-                        </p>
-                    </div>
-
-                    <!-- Full Stack -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">Full Stack</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[80%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            End-to-end development: frontend, backend, database, and deployment.
-                        </p>
-                    </div>
-
-                    <!-- Desktop -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">Desktop Apps</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[75%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Creating desktop applications with C# and Python.
-                        </p>
-                    </div>
-
-                    <!-- Android Studio -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">Android Studio</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[70%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Native Android apps development.
-                        </p>
-                    </div>
-
-                    <!-- Java -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">Java</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[70%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Java applications and Android development.
-                        </p>
-                    </div>
-
-                    <!-- Odoo -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">Odoo</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[65%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            ERP development and workflow customizations.
-                        </p>
-                    </div>
-
-                    <!-- Tailwind -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">TailwindCSS</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[85%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Fast, modern, utility-first styling for web projects.
-                        </p>
-                    </div>
-
-                    <!-- React -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">React</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[80%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Component-based frontend development and SPA apps.
-                        </p>
-                    </div>
-
-                    <!-- PHP -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">PHP</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[75%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Backend scripting and server-side web apps.
-                        </p>
-                    </div>
-
-                    <!-- MySQL -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">MySQL</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[85%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Relational database design and queries.
-                        </p>
-                    </div>
-
-                    <!-- SQL -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">SQL</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[85%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Writing optimized queries for relational databases.
-                        </p>
-                    </div>
-
-                    <!-- PostgreSQL -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">PostgreSQL</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[75%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Advanced relational database and data management.
-                        </p>
-                    </div>
-
-                    <!-- Hosting -->
-                    <div data-animate class="w-[250px] bg-gray-800 rounded-xl p-6 flex-shrink-0 snap-center">
-                        <h3 class="text-2xl font-bold mb-2">Hosting & VPS</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2 mb-3">
-                            <div class="bg-green-500 h-2 rounded-full w-[80%]"></div>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Web server setup, deployment, and maintenance.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="relative bg-gray-900 py-16 px-5 overflow-x-hidden">
-        <div class="max-w-6xl mx-auto flex flex-col items-start gap-6">
-            <!-- ... title/desc ... -->
-            <h2 class="text-4xl md:text-5xl font-bold text-white">Portfolio</h2>
-            <p class="text-gray-300 max-w-2xl">
-                A showcase of my work in web, mobile, and desktop development.
-            </p>
-
-            <!-- Carousel Navigation -->
-            <div class="w-full flex justify-end gap-3 mb-4">
-                <button id="pfScrollLeft" class="bg-gray-800 p-3 rounded-full shadow hover:bg-gray-700">
-                    &#8592;
-                </button>
-                <button id="pfScrollRight" class="bg-gray-800 p-3 rounded-full shadow hover:bg-gray-700">
-                    &#8594;
-                </button>
-            </div>
-
-            <!-- Carousel -->
-            <div id="pfCarousel" class="flex gap-5 overflow-x-auto pb-4 w-full scroll-smooth hide-scrollbar">
-                <!-- Cards -->
-            </div>
-
-            <!-- Fullscreen viewer -->
-            <div id="pfViewer"
-                class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50 overflow-auto transition-all duration-500">
-                <!-- Content will expand from clicked card -->
-            </div>
-        </div>
-    </section>
-
-    <section data-animate-container id="contact" class="bg-gray-900 py-16">
-        <div class="max-w-[800px] mx-auto px-4">
-            <article class="space-y-6">
-                <!-- Contact Header -->
-                <div class="text-center md:text-left">
-                    <p data-animate class="text-green-400 text-sm font-semibold uppercase tracking-wider">Get In Touch</p>
-                    <h2 data-animate class="text-4xl md:text-5xl font-bold text-white mt-2">
-                        Let's Build Something <span class="text-green-300">Amazing</span> Together
-                    </h2>
-                </div>
-
-                <!-- Contact Content -->
-                <div class="relative flex flex-col md:flex-row items-start gap-8 mt-6">
-                    <!-- Professional Info -->
-                    <div class="w-full md:w-auto flex flex-col px-4 py-2">
-                        <p data-animate class="text-green-100 text-sm font-semibold uppercase tracking-wider">Full-Stack Developer
-                        </p>
-                        <h3 data-animate class="text-2xl md:text-3xl font-bold text-green-300 mt-1">
-                            Web, Mobile & Python Solutions
-                        </h3>
-                        <p data-animate class="text-gray-300 mt-4 max-w-[500px] leading-relaxed">
-                            As a freelance developer, I've delivered responsive web applications,
-                            efficient Python tools, and cross-platform mobile solutions for global clients.
-                            Specializing in clean, maintainable code that brings ideas to life.
-                        </p>
-
-                        <!-- Social Icons Flexbox -->
-                        <div class="flex gap-6 mt-8">
-                            <a data-animate href="https://www.linkedin.com/in/a95yman/" class="transition-transform hover:scale-110">
-                                <img src="assets/icons/linkedin.png" alt="LinkedIn" class="w-8 h-8 brightness-0 invert">
-                            </a>
-                            <a data-animate href="https://wa.me/+212688459384" class="transition-transform hover:scale-110">
-                                <img src="assets/icons/whatsapp.png" alt="WhatsApp" class="w-8 h-8 brightness-0 invert">
-                            </a>
-                            <a data-animate href="https://www.instagram.com/aoxt_9" class="transition-transform hover:scale-110">
-                                <img src="assets/icons/instagram.png" alt="Instagram"
-                                    class="w-8 h-8 brightness-0 invert">
-                            </a>
-                            <a data-animate href="mailto:a95yman@gmail.com" class="transition-transform hover:scale-110">
-                                <img src="assets/icons/gmail.png" alt="Email" class="w-8 h-8 brightness-0 invert">
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Contact Form (optional - you can add later) -->
-                    <div class="w-full md:w-1/2 hidden md:block">
-                        <!-- Space reserved for future contact form -->
+                    <div class="post-card" data-link="article/whats-new-in-csharp-10.html"
+                        data-category="Desktop Development">
+                        <img src="assets/blog/images/csharp10-features.webp" alt="C# 10 new features illustration">
+                        <h3>What’s New in C# 10: Features and Improvements</h3>
+                        <p>Explore the latest enhancements in C# 10, including global using directives, file-scoped
+                            namespaces, record improvements, and other modern features that simplify coding and improve
+                            maintainability.</p>
                     </div>
                 </div>
-            </article>
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
-    <footer class="py-6 bg-gray-900 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400 text-sm">
-                &copy; 2025 <span class="text-green-300">Ayman Atif</span>. All rights reserved.
-            </p>
-        </div>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <p class="footer-copy">&copy; 2025 Ayman Atif. All rights reserved.</p>
     </footer>
 
-    <script src="assets/scripts/script.js"></script>
+    <script>
+        const cards = document.querySelectorAll('.build-card');
+        let current = 0;
+        const interval = 1500; // total time per card
+        const overlap = 100;   // overlap duration before removing previous active
+
+        function activateNextCard() {
+            // Add active to the current card
+            cards[current].classList.add('active');
+
+            // Schedule removal of active from previous card after overlap
+            const prev = (current - 1 + cards.length) % cards.length;
+            setTimeout(() => {
+                cards[prev].classList.remove('active');
+            }, overlap);
+
+            // Move to next card
+            current = (current + 1) % cards.length;
+        }
+
+        // Activate first card immediately
+        activateNextCard();
+
+        // Loop every interval
+        setInterval(activateNextCard, interval);
+
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        menuBtn.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        // Optional: Close menu when clicking outside the nav
+        menuOverlay.addEventListener('click', (e) => {
+            if (e.target === menuOverlay) {
+                menuOverlay.classList.remove('active');
+            }
+        });
+
+        document.querySelectorAll('.post-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const link = card.dataset.link;
+                if (link) window.location.href = link;
+            });
+        });
+    </script>
 </body>
 
 </html>
