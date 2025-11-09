@@ -48,6 +48,10 @@ h1,
     font-family: 'Poiret One', sans-serif;
 }
 
+.logo-link {
+    text-decoration: none;
+}
+
 .header-buttons {
     display: flex;
     gap: 1rem;
